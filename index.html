@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LapangIn! - Temukan & Pesan Lapangan Olahragamu!</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans for a modern, sporty tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#2154C6', // LapangIn Blue
+                dark: '#1A429C',
+              },
+              bg: {
+                ghost: '#FAFAFF', // Ghost White
+                paper: '#FFFFFF',
+              },
+              text: {
+                main: '#222222', // Eerie Black
+                secondary: '#4B4237', // Taupe (used for secondary text)
+              },
+              accent: {
+                wheat: '#EDD4B2',
+                tan: '#D0A98F',
+                taupe: '#4B4237',
+              },
+              state: {
+                green: '#27AE60',
+                yellow: '#F7B500',
+                red: '#EB5757',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FAFAFF;
+        color: #222222;
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
