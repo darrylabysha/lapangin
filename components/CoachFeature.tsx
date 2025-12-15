@@ -41,7 +41,7 @@ export const CoachFeature: React.FC = () => {
           <div className="flex-1">
              <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">Sewa Pelatih Profesional</h2>
              <h3 className="text-3xl md:text-4xl font-extrabold text-text-main mb-6 leading-tight">
-               Ingin Jago Tapi Ga Tau <br /> Mulai Dari Mana?
+               Ingin Jago Tapi Gak Tau <br /> Mulai Dari Mana?
              </h3>
              <p className="text-text-secondary text-lg mb-8 leading-relaxed">
                Temukan pelatih berlisensi resmi di sekitarmu. Lihat rating, ulasan, dan sertifikasi mereka secara transparan. Booking sesi latihan privat atau kelompok semudah belanja online.
