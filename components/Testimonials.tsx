@@ -3,19 +3,19 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Luhur Billy",
+    name: "Luhur Arian Justitio",
     role: "Mahasiswa & Ketua UKM Futsal",
     image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&auto=format&fit=crop",
     quote: "Fitur sparring-nya juara! Dulu susah cari lawan tanding buat UKM kampus, sekarang tinggal buat open sparring, langsung dapet lawan seimbang.",
   },
   {
-    name: "Wati Setiawan",
+    name: "Beyonce Setiawan",
     role: "Ibu Rumah Tangga",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
     quote: "Anak saya mau les bulutangkis tapi saya bingung cari pelatih di mana. Di LapangIn bisa filter pelatih sesuai domisili dan lihat sertifikasinya.",
   },
   {
-    name: "Andi Pratama",
+    name: "Lebron Wijaya",
     role: "Karyawan Swasta",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
     quote: "Pulang kerja pengen main basket tapi males ngecek lapangan satu-satu. LapangIn ngebantu banget liat jadwal real-time, jadi ga takut double booking.",

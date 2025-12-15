@@ -4,7 +4,7 @@ import { TeamMember } from '../types';
 const teamData: TeamMember[] = [
   { id: '1', name: 'Dyandra Nadine Zahira', studentId: '2206028264' },
   { id: '2', name: 'Malika Atha Indurasmi', studentId: '2306275203' },
-  { id: '3', name: 'Darryl Abysha A.', studentId: '2206082846' },
+  { id: '3', name: 'Darryl Abysha Artapradana', studentId: '2206082846' },
   { id: '4', name: 'Gamma Farrel', studentId: '2206025035' },
 ];
 
