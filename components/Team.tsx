@@ -1,12 +1,39 @@
 import React from 'react';
 import { TeamMember } from '../types';
 
-const teamData: TeamMember[] = [
-  { id: '1', name: 'Dyandra Nadine Zahira', studentId: '2206028264' },
-  { id: '2', name: 'Malika Atha Indurasmi', studentId: '2306275203' },
-  { id: '3', name: 'Darryl Abysha Artapradana', studentId: '2206082846' },
-  { id: '4', name: 'Gamma Farrel', studentId: '2206025035' },
+import NadineImg from './images/teamphoto/nadine.jpg';
+import AthaImg from './images/teamphoto/atha.jpg';
+import DarrylImg from './images/teamphoto/darryl.jpg';
+import GammaImg from './images/teamphoto/gamma.jpg'; // Mengganti 'GammaImg'
+
+
+const teamData: TeamMember[] & { photo: string }[] = [
+  {
+    id: '1',
+    name: 'Dyandra Nadine Zahira',
+    studentId: '2206028264',
+    photo: NadineImg,
+  },
+  {
+    id: '2',
+    name: 'Malika Atha Indurasmi',
+    studentId: '2306275203',
+    photo: AthaImg,
+  },
+  {
+    id: '3',
+    name: 'Darryl Abysha Artapradana',
+    studentId: '2206082846',
+    photo: DarrylImg,
+  },
+  {
+    id: '4',
+    name: 'Gamma Farrel',
+    studentId: '2206025035',
+    photo: GammaImg,
+  },
 ];
+
 
 const getInitials = (name: string) =>
   name
@@ -39,29 +66,34 @@ export const Team: React.FC = () => {
           {teamData.map(member => (
             <div
               key={member.id}
-              className="bg-white rounded-2xl p-8 text-center border border-gray-100
-                         shadow-md hover:shadow-xl transition-all duration-300
-                         hover:-translate-y-1"
+              className="bg-white rounded-2xl p-10 text-center border border-gray-100
+                        shadow-sm hover:shadow-2xl transition-all duration-300
+                        hover:-translate-y-2"
             >
-              {/* Initials Avatar */}
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10
-                              flex items-center justify-center text-primary
-                              font-extrabold text-xl tracking-wide">
-                {getInitials(member.name)}
+              {/* Photo */}
+              <div className="w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden
+                              ring-4 ring-primary/10 shadow-lg
+                              transition-transform duration-500 hover:scale-105">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Name */}
-              <h3 className="text-lg font-bold text-text-main mb-2">
+              <h3 className="text-lg font-bold text-text-main mb-2 leading-snug">
                 {member.name}
               </h3>
 
               {/* NPM */}
-              <div className="inline-block bg-gray-100 px-4 py-1 rounded-full">
-                <p className="text-text-secondary text-sm font-mono">
+              <div className="inline-block bg-gray-100 px-4 py-1.5 rounded-full">
+                <p className="text-text-secondary text-sm font-mono tracking-wide">
                   {member.studentId}
                 </p>
               </div>
             </div>
+
           ))}
         </div>
 

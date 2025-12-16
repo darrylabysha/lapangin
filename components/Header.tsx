@@ -7,7 +7,10 @@ import { Logo } from './Logo';
 const navLinks: NavLink[] = [
   { label: 'Fitur', href: '#features' },
   { label: 'Cara Booking', href: '#how-it-works' },
-  { label: 'Tim Kami', href: '#team' },
+  { label: 'Pelatih', href: '#coach' },
+  { label: 'Sparring', href: '#community' },
+  { label: 'Add-Ons', href: '#addons' },
+  
 ];
 
 export const Header: React.FC = () => {
@@ -40,7 +43,7 @@ export const Header: React.FC = () => {
             <a 
               key={link.label} 
               href={link.href}
-              className="text-text-secondary font-medium hover:text-primary transition-colors"
+              className="text-text-secondary font-medium hover:text-primary transition-colors text-sm lg:text-base"
             >
               {link.label}
             </a>

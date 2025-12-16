@@ -4,12 +4,12 @@ import { Hero } from './components/Hero';
 import { Stats } from './components/Stats';
 import { Features } from './components/Features';
 import { CoachFeature } from './components/CoachFeature';
+import { CommunityFeature } from './components/CommunityFeature';
 import { AddOnFeature } from './components/AddOnFeature';
 import { Testimonials } from './components/Testimonials';
 import { Team } from './components/Team';
 import { Footer } from './components/Footer';
 import { ScheduleScreenMock } from './components/MobileAppPreview';
-
 import RentImg from './components/images/rent.png';
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
                        <div className="flex gap-6 group">
                           <div className="w-14 h-14 rounded-2xl bg-gray-800 flex items-center justify-center text-primary font-bold text-xl shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">3</div>
                           <div>
-                             <h4 className="text-xl font-bold mb-2 text-white">Mainkan!</h4>
+                             <h4 className="text-xl font-bold mb-2 text-white">Main!</h4>
                              <p className="text-gray-400 leading-relaxed">Lakukan pembayaran aman via E-Wallet/QRIS. Tiket digital langsung terbit. Saatnya bertanding!</p>
                           </div>
                        </div>
@@ -75,9 +75,16 @@ function App() {
         </section>
         
         {/* New Sections */}
-        <CoachFeature />
-        <AddOnFeature />
+        <div id="coach">
+          <CoachFeature />
+        </div>
         
+        {/* CommunityFeature has internal ID="community" */}
+        <CommunityFeature />
+        
+        <div id="addons">
+          <AddOnFeature />
+        </div>
 
         <Testimonials />
 
