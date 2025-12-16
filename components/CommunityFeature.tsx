@@ -1,6 +1,5 @@
 import React from 'react';
 import { Users, Zap, Search, Trophy } from 'lucide-react';
-// import { CommunityScreenMock, SparringScreenMock } from './MobileAppPreview';
 
 import CommunityImg from './images/community.png';
 import SparImg from './images/spar.png';
@@ -15,41 +14,50 @@ export const CommunityFeature: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-12">
           
-           {/* Visual Mockups Side - Overlapping Phones */}
-           <div className="flex-1 w-full flex justify-center lg:justify-end relative min-h-[500px] md:min-h-[600px]">
+           {/* Visual Mockups Side - Side-by-side / Fanned out */}
+           <div className="flex-1 w-full flex justify-center items-center lg:justify-end relative min-h-[400px] sm:min-h-[550px] md:min-h-[600px]">
              
              {/* Phone 1: Sparring (Back/Left) */}
-             <div className="absolute left-0 sm:left-10 top-12 transform -rotate-6 scale-90 opacity-90 hover:scale-100 hover:rotate-0 hover:z-30 hover:opacity-100 transition-all duration-500 z-10">
-                <div className="w-[280px] h-[600px] bg-[#483d8b] rounded-[2.5rem] border-[6px] border-[#333] overflow-hidden shadow-2xl">
+             <div className="absolute left-1/2 top-1/2 lg:top-12 lg:left-10
+                             transform -translate-x-[75%] -translate-y-1/2 lg:translate-x-0 lg:translate-y-0
+                             -rotate-12 lg:-rotate-6 
+                             scale-[0.6] sm:scale-75 lg:scale-90 
+                             opacity-90 
+                             z-10 origin-center lg:origin-bottom transition-all duration-500 hover:z-30 hover:opacity-100 hover:scale-[0.65] lg:hover:scale-100">
+                <div className="w-[280px] h-[580px] bg-[#483d8b] rounded-[2.5rem] border-[6px] border-[#333] overflow-hidden shadow-2xl">
                    <img
                     src={SparImg}
                     alt="Sparring Feature"
                     className="w-full h-full object-cover"
                     />
-
                 </div>
              </div>
 
              {/* Phone 2: Community (Front/Right) */}
-             <div className="absolute right-0 sm:right-10 top-0 transform rotate-3 hover:rotate-0 transition-transform duration-500 z-20">
-                <div className="w-[280px] h-[600px] bg-[#3D2525] rounded-[2.5rem] border-[6px] border-[#333] overflow-hidden shadow-2xl shadow-red-900/20">
+             <div className="absolute left-1/2 top-1/2 lg:top-0 lg:left-auto lg:right-10
+                             transform -translate-x-[25%] -translate-y-1/2 lg:translate-x-0 lg:translate-y-0
+                             rotate-6 lg:rotate-3 
+                             scale-[0.6] sm:scale-75 lg:scale-90 
+                             z-20 origin-center lg:origin-bottom transition-transform duration-500 hover:z-30 hover:scale-[0.65] lg:hover:scale-100">
+                <div className="w-[280px] h-[580px] bg-[#3D2525] rounded-[2.5rem] border-[6px] border-[#333] overflow-hidden shadow-2xl shadow-red-900/20">
                    <img
                     src={CommunityImg}
                     alt="Community Feature"
                     className="w-full h-full object-cover"
                     />
-
                 </div>
              </div>
 
-             {/* Floating Badge */}
-             <div className="absolute bottom-20 right-1/2 transform translate-x-1/2 z-30 bg-white p-4 rounded-2xl shadow-xl border border-red-100 animate-bounce-slow flex items-center gap-3">
-                 <div className="bg-red-50 p-2 rounded-full">
-                    <Trophy className="text-red-500 w-6 h-6" />
+             {/* Floating Badge - Centered below on mobile */}
+             <div className="absolute bottom-4 sm:bottom-20 left-1/2 lg:right-1/2 
+                             transform -translate-x-1/2 lg:translate-x-1/2 
+                             z-30 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-red-100 animate-bounce-slow flex items-center gap-3 w-max max-w-[90%]">
+                 <div className="bg-red-50 p-2 rounded-full shrink-0">
+                    <Trophy className="text-red-500 w-5 h-5 sm:w-6 sm:h-6" />
                  </div>
                  <div>
                     <p className="text-[10px] text-gray-400 font-bold uppercase">Komunitas Aktif</p>
-                    <p className="text-sm font-bold text-gray-900">1,200+ Member</p>
+                    <p className="text-sm font-bold text-text-main">1,200+ Member</p>
                  </div>
              </div>
           </div>
