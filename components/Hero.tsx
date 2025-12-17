@@ -43,7 +43,17 @@ export const Hero: React.FC = () => {
                 Unduh Sekarang
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto group bg-white hover:bg-gray-50 border-gray-200">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto group bg-white hover:bg-gray-50 border-gray-200"
+                onClick={() =>
+                  window.open(
+                    'https://www.figma.com/proto/81nydAaHMNwvLEGN0lw2Fk/PPD?node-id=319-730&t=NVtEnqqsNP2SYIWc-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=319%3A730',
+                    '_blank'
+                  )
+                }
+              >
                 <PlayCircle className="mr-2 w-5 h-5" />
                 Cara Kerja
               </Button>
